@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--===== FAVICON =====-->
+    <link rel="shortcut icon" href="./assets/img/favicon.png" />
+    <!--===== CSS STYLE =====-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Conversor de Moedas</title>
+  </head>
+  <body>
+    <main>
+      <section class="boxImg">
+        <h1>CONVERSOR DE MOEDAS</h1>
+        <div class="boxImgBackground">
+          <img src="./assets/img/make-it-rain-animate.svg" alt="Finanças" />
+        </div>
+      </section>
+      <section class="boxForm">
+        <h2>Digite o valor em Reais</h2>
+        <input
+          type="number"
+          min="0"
+          class="boxValor"
+          id="valor"
+          placeholder="R$"
+        />
+        <h3>Escolha a Moeda</h3>
+        <ul class="boxFormOpcoes">
+          <li>
+            <input
+              onclick="pegarTipoMoeda()"
+              class="ops"
+              type="radio"
+              name="moeda"
+              value="dolar"
+              checked
+            />Dolar
+          </li>
+
+          <li>
+            <input
+              onclick="pegarTipoMoeda()"
+              class="ops"
+              type="radio"
+              name="moeda"
+              value="euro"
+            />Euro
+          </li>
+
+          <li>
+            <input
+              onclick="pegarTipoMoeda()"
+              class="ops"
+              type="radio"
+              name="moeda"
+              value="bit"
+            />Bitcoin
+          </li>
+        </ul>
+
+        <button type="submit" onclick="converterValor()" class="boxFormBtn">
+          Converter
+        </button>
+
+        <div class="valorConvertido" id="valorConvertido">
+          <h3>Valor Convertido</h3>
+        </div>
+      </section>
+    </main>
+    <!--===== JAVASCRIPT LINKS =====-->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
